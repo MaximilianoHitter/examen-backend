@@ -1,4 +1,5 @@
 <h1>Examen - Backend</h1>
+<p>Herramientas utilizadas: Laragon, VSCode, PHPMyAdmin, Composer, ThunderClient, Laravel.</p>
 <br>
 <h3>Descripción de Endpoints</h3>
 <h5>Controlador Categorías</h5>

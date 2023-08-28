@@ -626,4 +626,27 @@
         </ul>
     </li>
 </ul>
+<hr>
+<h3>Para correr el projecto es necesario tener instalado lo siguiente:</h3>
+<ul>
+    <li>PHP version mayor a 8</li>
+    <li>Composer</li>
+    <li>Node js</li>
+    <li>MySQL/MariaDB</li>
+</ul>
+<p>En caso de necesitar un server, el desarrollo se llevó adelante utilizando Laragon</p>
+<p>Teniendo ya el proyecto descargado se deben tener 3 cosas</p>
+<ol>
+    <li>Levantar el servicio del servidor que se esté utilizando</li>
+    <li>Crear una base de datos con el nombre que se utiliza en el archivo .env, DB_DATABASE, y luego configurar con usuario y contraseña del servicio gestor de base de datos y su puerto e ip (en caso de que esté localizado en otro sitio)</li>
+    <li>
+        <p>Acceder a la terminal estando sobre el root del proyecto y correr los siguientes comandos</p>
+        <ul>
+            <li>composer update</li>
+            <li>php artisan optimize</li>
+            <li>php artisan migrate</li>
+            <li>php artisan serve</li>
+        </ul>
+    </li>
+</ol>
 

@@ -16,7 +16,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        return new CursoResource(Curso::all());
+        return new CursoResource(Curso::with('categoria')->get());
     }
 
     /**

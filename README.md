@@ -764,6 +764,13 @@
             <li>php artisan migrate</li>
             <li>php artisan serve</li>
         </ul>
+        <p>En caso de querer utilizar los factory utilizar los siguientes comandos:</p>
+        <ul>
+            <li>composer update</li>
+            <li>php artisan optimize</li>
+            <li>php artisan migrate:fresh --seed</li>
+            <li>php artisan serve</li>
+        </ul>
     </li>
 </ol>
 

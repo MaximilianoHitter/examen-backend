@@ -18,7 +18,16 @@ class CursoController extends Controller
      */
     public function index()
     {
-        return new CursoResource(Curso::with('categoria')->get());
+        $cursos = Curso::with('categoria')->get();
+        foreach ($cursos as $key => $value) {
+            if($value->updated_at != null){
+                $value->actualizado = Carbon::parse($value->updated_at)->format('d/m/Y'); 
+            }
+            if($value->created_at != null){
+                $value->creado = Carbon::parse($value->created_at)->format('d/m/Y'); 
+            }
+        }
+        return new CursoResource($cursos);
     }
 
     /**

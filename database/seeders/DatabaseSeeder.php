@@ -3,7 +3,13 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Categoria;
+use App\Models\Curso;
+use App\Models\Persona;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +24,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Categoria::factory(5)->create();
+        Curso::factory(15)->create();
+        Persona::factory(10)->create();
+        $this->personaCurso();
+    }
+
+    private function personaCurso(){
+        $faker = Factory::create();
+        return DB::table('cursos_personas')->insert([
+            "curso_id" => $faker->randomNumber(1, 15),
+            "persona_id" => $faker->randomNumber(1, 10)
+        ]);
     }
 }

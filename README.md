@@ -140,33 +140,37 @@
   "data": [
     {
       "id": 1,
-      "nombre": "TP Rfinal",
-      "descripcion": "DSAasdD",
-      "categoria_id": 1,
-      "created_at": "2023-08-26T19:24:46.000000Z",
-      "updated_at": "2023-08-30T23:30:49.000000Z",
+      "nombre": "Quos eligendi.",
+      "descripcion": "Sapiente est voluptas provident ut et laudantium praesentium.",
+      "categoria_id": 2,
+      "created_at": "2023-08-31T21:32:25.000000Z",
+      "updated_at": "2023-08-31T21:32:25.000000Z",
+      "actualizado": "31/08/2023",
+      "creado": "31/08/2023",
       "categoria": {
-        "id": 1,
-        "nombre": "Programaciónes",
-        "created_at": "2023-08-26T19:24:41.000000Z",
-        "updated_at": "2023-08-30T23:36:09.000000Z"
+        "id": 2,
+        "nombre": "Dr. Andres Dibbert II",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
       }
     },
     {
       "id": 2,
-      "nombre": "Diseño de bases de datos",
-      "descripcion": "asdasdasd",
-      "categoria_id": 2,
-      "created_at": "2023-08-26T17:22:27.000000Z",
-      "updated_at": null,
+      "nombre": "Omnis.",
+      "descripcion": "Aliquam animi quis voluptas provident cupiditate dolorem qui quia exercitationem.",
+      "categoria_id": 1,
+      "created_at": "2023-08-31T21:32:25.000000Z",
+      "updated_at": "2023-08-31T21:32:25.000000Z",
+      "actualizado": "31/08/2023",
+      "creado": "31/08/2023",
       "categoria": {
-        "id": 2,
-        "nombre": "SQL",
-        "created_at": "2023-08-26T17:22:06.000000Z",
-        "updated_at": null
+        "id": 1,
+        "nombre": "Mr. Miller Lang V",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
       }
     }
-  ]
+    ]
 }
                 </pre>
             </li>

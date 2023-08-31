@@ -140,11 +140,17 @@
   "data": [
     {
       "id": 1,
-      "nombre": "TP final",
-      "descripcion": "ASD",
+      "nombre": "TP Rfinal",
+      "descripcion": "DSAasdD",
       "categoria_id": 1,
       "created_at": "2023-08-26T19:24:46.000000Z",
-      "updated_at": "2023-08-26T19:24:46.000000Z"
+      "updated_at": "2023-08-30T23:30:49.000000Z",
+      "categoria": {
+        "id": 1,
+        "nombre": "Programaciónes",
+        "created_at": "2023-08-26T19:24:41.000000Z",
+        "updated_at": "2023-08-30T23:36:09.000000Z"
+      }
     },
     {
       "id": 2,
@@ -152,7 +158,13 @@
       "descripcion": "asdasdasd",
       "categoria_id": 2,
       "created_at": "2023-08-26T17:22:27.000000Z",
-      "updated_at": null
+      "updated_at": null,
+      "categoria": {
+        "id": 2,
+        "nombre": "SQL",
+        "created_at": "2023-08-26T17:22:06.000000Z",
+        "updated_at": null
+      }
     }
   ]
 }
@@ -283,60 +295,44 @@
             <li>Output:
                 <pre>
 {
-  "1": {
-    "reporte": {
-      "masculino": 1,
-      "femenino": 1,
-      "suma_total_generos": 2,
-      "mayores": 2,
-      "menores": 0,
-      "suma_total_edades": 2
-    },
-    "info": {
+  "data": [
+    {
+      "nombre": "TP Rfinal",
+      "descripcion": "DSAasdD",
       "id": 1,
-      "nombre": "TP REfinal",
-      "descripcion": "Prueba",
-      "categoria_id": 1,
-      "created_at": "2023-08-26T19:24:46.000000Z",
-      "updated_at": "2023-08-26T22:14:54.000000Z"
-    }
-  },
-  "2": {
-    "reporte": {
-      "masculino": 0,
-      "femenino": 1,
-      "suma_total_generos": 1,
-      "mayores": 1,
-      "menores": 0,
-      "suma_total_edades": 1
+      "porcentaje_masculino": 100,
+      "porcentaje_femenino": 0,
+      "porcentaje_mayores": 100,
+      "porcentaje_menores": 0
     },
-    "info": {
-      "id": 2,
+    {
       "nombre": "Diseño de bases de datos",
-      "descripcion": "Prueba",
-      "categoria_id": 2,
-      "created_at": "2023-08-26T17:22:27.000000Z",
-      "updated_at": null
-    }
-  },
-  "3": {
-    "reporte": {
-      "masculino": 0,
-      "femenino": 1,
-      "suma_total_generos": 1,
-      "mayores": 1,
-      "menores": 0,
-      "suma_total_edades": 1
+      "descripcion": "asdasdasd",
+      "id": 2,
+      "porcentaje_masculino": 100,
+      "porcentaje_femenino": 0,
+      "porcentaje_mayores": 100,
+      "porcentaje_menores": 0
     },
-    "info": {
-      "id": 3,
+    {
       "nombre": "IPOO",
-      "descripcion": "Prueba",
-      "categoria_id": 1,
-      "created_at": "2023-08-26T17:38:27.000000Z",
-      "updated_at": null
+      "descripcion": "asd",
+      "id": 3,
+      "porcentaje_masculino": 100,
+      "porcentaje_femenino": 0,
+      "porcentaje_mayores": 100,
+      "porcentaje_menores": 0
+    },
+    {
+      "nombre": "Lolo",
+      "descripcion": "asdasd",
+      "id": 4,
+      "porcentaje_masculino": 100,
+      "porcentaje_femenino": 0,
+      "porcentaje_mayores": 100,
+      "porcentaje_menores": 0
     }
-  }
+  ]
 }
                 </pre>
             </li>
@@ -350,40 +346,55 @@
             <li>Parámetros: No posee</li>
             <li>Output:
                 <pre>
-[
-  {
-    "id": 1,
-    "nombre": "TP Del final",
-    "descripcion": "Prueba",
-    "categoria_id": 1,
-    "created_at": "2023-08-26T19:24:46.000000Z",
-    "updated_at": "2023-08-26T22:14:54.000000Z"
-  },
-  {
-    "id": 6,
-    "nombre": "TP final",
-    "descripcion": "Prueba",
-    "categoria_id": 2,
-    "created_at": "2023-08-26T22:10:29.000000Z",
-    "updated_at": "2023-08-26T22:10:29.000000Z"
-  },
-  {
-    "id": 2,
-    "nombre": "Diseño de bases de datos",
-    "descripcion": "Prueba",
-    "categoria_id": 2,
-    "created_at": "2023-08-26T17:22:27.000000Z",
-    "updated_at": null
-  },
-  {
-    "id": 3,
-    "nombre": "IPOO",
-    "descripcion": "Prueba",
-    "categoria_id": 1,
-    "created_at": "2023-08-26T17:38:27.000000Z",
-    "updated_at": null
-  }
-]
+{
+  "data": [
+    {
+      "id": 1,
+      "nombre": "TP Rfinal",
+      "descripcion": "DSAasdD",
+      "categoria_id": 1,
+      "created_at": "2023-08-26T19:24:46.000000Z",
+      "updated_at": "2023-08-30T23:30:49.000000Z",
+      "actualizado": "30/08/2023",
+      "categoria": {
+        "id": 1,
+        "nombre": "Programaciónes",
+        "created_at": "2023-08-26T19:24:41.000000Z",
+        "updated_at": "2023-08-30T23:36:09.000000Z"
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Juansito",
+      "descripcion": "asdasd",
+      "categoria_id": 2,
+      "created_at": "2023-08-30T01:36:27.000000Z",
+      "updated_at": "2023-08-30T01:36:27.000000Z",
+      "actualizado": "30/08/2023",
+      "categoria": {
+        "id": 2,
+        "nombre": "SQL",
+        "created_at": "2023-08-26T17:22:06.000000Z",
+        "updated_at": null
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "C++",
+      "descripcion": "Para aprender menos",
+      "categoria_id": 5,
+      "created_at": "2023-08-30T01:30:56.000000Z",
+      "updated_at": "2023-08-30T01:30:56.000000Z",
+      "actualizado": "30/08/2023",
+      "categoria": {
+        "id": 5,
+        "nombre": "ASD",
+        "created_at": "2023-08-27T00:09:43.000000Z",
+        "updated_at": "2023-08-27T00:09:43.000000Z"
+      }
+    }
+  ]
+}
                 </pre>
             </li>
         </ul>

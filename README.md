@@ -649,7 +649,7 @@
 <p>Teniendo ya el proyecto descargado se deben tener 3 cosas</p>
 <ol>
     <li>Levantar el servicio del servidor que se esté utilizando</li>
-    <li>Crear una base de datos con el nombre que se utiliza en el archivo .env, DB_DATABASE, y luego configurar con usuario y contraseña del servicio gestor de base de datos y su puerto e ip (en caso de que esté localizado en otro sitio)</li>
+    <li>Crear una base de datos con el nombre que se utiliza en el archivo .env(se debe quitar el .example del .env.example), DB_DATABASE, y luego configurar con usuario y contraseña del servicio gestor de base de datos y su puerto e ip (en caso de que esté localizado en otro sitio)</li>
     <li>
         <p>Acceder a la terminal estando sobre el root del proyecto y correr los siguientes comandos</p>
         <ul>

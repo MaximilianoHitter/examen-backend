@@ -399,6 +399,108 @@
             </li>
         </ul>
     </li>
+    <li>
+      <ul>
+        <li>Endpoint: /api/cursosPorPersona</li>
+        <li>Método: POST</li>
+        <li>Descripción: Se utiliza para obtener los cursos a los cuales está inscripta una persona</li>
+        <li>Parámetros:
+          <pre>
+{
+  "persona_id":5
+}
+          </pre>
+        </li>
+        <li>Output:
+          <pre>
+{
+  "data": [
+    {
+      "id": 1,
+      "nombre": "Qui exercitationem.",
+      "descripcion": "Occaecati tempora quia tempore fugit pariatur delectus et deleniti sed suscipit.",
+      "categoria_id": 2,
+      "created_at": null,
+      "updated_at": null,
+      "curso_id": 4,
+      "persona_id": 5,
+      "categoria": {
+        "id": 2,
+        "nombre": "Dr. Andres Dibbert II",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Quos eligendi.",
+      "descripcion": "Sapiente est voluptas provident ut et laudantium praesentium.",
+      "categoria_id": 2,
+      "created_at": null,
+      "updated_at": null,
+      "curso_id": 1,
+      "persona_id": 5,
+      "categoria": {
+        "id": 2,
+        "nombre": "Dr. Andres Dibbert II",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Omnis.",
+      "descripcion": "Aliquam animi quis voluptas provident cupiditate dolorem qui quia exercitationem.",
+      "categoria_id": 1,
+      "created_at": null,
+      "updated_at": null,
+      "curso_id": 2,
+      "persona_id": 5,
+      "categoria": {
+        "id": 1,
+        "nombre": "Mr. Miller Lang V",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Omnis.",
+      "descripcion": "Aliquam animi quis voluptas provident cupiditate dolorem qui quia exercitationem.",
+      "categoria_id": 1,
+      "created_at": null,
+      "updated_at": null,
+      "curso_id": 2,
+      "persona_id": 5,
+      "categoria": {
+        "id": 1,
+        "nombre": "Mr. Miller Lang V",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Aut.",
+      "descripcion": "Sed inventore minus eum voluptatum sequi ullam.",
+      "categoria_id": 3,
+      "created_at": null,
+      "updated_at": null,
+      "curso_id": 7,
+      "persona_id": 5,
+      "categoria": {
+        "id": 3,
+        "nombre": "Jennings Kerluke",
+        "created_at": "2023-08-31T21:32:25.000000Z",
+        "updated_at": "2023-08-31T21:32:25.000000Z"
+      }
+    }
+  ]
+}
+          </pre>
+        </li>
+      </ul>
+    </li>
 </ul>
 
 <hr>

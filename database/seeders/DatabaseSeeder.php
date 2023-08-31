@@ -27,7 +27,9 @@ class DatabaseSeeder extends Seeder
         Categoria::factory(5)->create();
         Curso::factory(15)->create();
         Persona::factory(10)->create();
-        $this->personaCurso();
+        for ($i=0; $i < 11; $i++) { 
+            $this->personaCurso();
+        }
     }
 
     private function personaCurso(){

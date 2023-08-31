@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCursoRequest;
 use App\Http\Requests\UpdateCursoRequest;
+use App\Http\Requests\ValidarIdPersonaRequest;
 use App\Http\Resources\CursoResource;
 use App\Models\Curso;
 use App\Models\Persona;
@@ -130,6 +131,16 @@ class CursoController extends Controller
             }
         }
         return new CursoResource($cursos);
+    }
+
+    /**
+     * Método para obtener los cursos a los cuales está anotado una persona
+     * id_persona
+     */
+    public function cursos_por_persona(ValidarIdPersonaRequest $request){
+        return new CursoResource(Curso::with('categoria')
+        ->leftJoin('cursos_personas', 'cursos.id', 'cursos_personas.curso_id')
+        ->where('cursos_personas.persona_id', $request->persona_id)->get());
     }
 
 }

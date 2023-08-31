@@ -29,3 +29,4 @@ Route::resource('/categoria', CategoriaController::class);
 Route::resource('/curso', CursoController::class);
 Route::get('/reportePorCurso', [CursoController::class, 'reportePorCurso']);
 Route::get('/cursos-actualizados', [CursoController::class, 'cursos_actualizados']);
+Route::post('/cursosPorPersona', [CursoController::class, 'cursos_por_persona']);

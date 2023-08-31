@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateCursoRequest;
 use App\Http\Resources\CursoResource;
 use App\Models\Curso;
 use App\Models\Persona;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
@@ -77,6 +78,7 @@ class CursoController extends Controller
         $data = [];
         $cursos = Curso::all();
         foreach ($cursos as $key => $value) {
+            $tupla = [];
             $datos['masculino'] = Persona::with('cursos_personas')
             ->leftJoin('cursos_personas', 'personas.id', 'cursos_personas.persona_id')
             ->where('genero', 'masculino')
@@ -95,17 +97,39 @@ class CursoController extends Controller
             ->where('edad', '<', 18)
             ->where('cursos_personas.curso_id', $value->id)->count();
             $datos['suma_total_edades'] = $datos['mayores'] + $datos['menores'];
-            $data[$value->id]['reporte'] = $datos;
-            $data[$value->id]['info'] = $value;
+            $tupla['nombre'] = $value->nombre;
+            $tupla['descripcion'] = $value->descripcion;
+            $tupla['id'] = $value->id;
+            if($datos['suma_total_generos'] == 0){
+                $tupla['porcentaje_masculino'] = 0;
+                $tupla['porcentaje_femenino'] = 0;
+            }else{
+                $tupla['porcentaje_masculino'] = ($datos['masculino'] * 100 / $datos['suma_total_generos']);
+                $tupla['porcentaje_femenino'] = ($datos['femenino'] * 100 / $datos['suma_total_generos']);
+            }
+            if($datos['suma_total_edades'] == 0){
+                $tupla['porcentaje_mayores'] = 0;
+                $tupla['porcentaje_menores'] = 0;
+            }else{
+                $tupla['porcentaje_mayores'] = ($datos['mayores'] * 100 / $datos['suma_total_edades']);
+                $tupla['porcentaje_menores'] = ($datos['menores'] * 100 / $datos['suma_total_edades']);
+            }
+            $data[$value->id] = $tupla;
         }
-        return $data;
+        return new CursoResource($data);
     }
 
     /**
      * Método para obtener los cursos ordenados según cual fue actualizado mas recientemente
      */
     public function cursos_actualizados(){
-        return Curso::orderBy('updated_at', 'desc')->get();
+        $cursos = Curso::with('categoria')->orderBy('updated_at', 'desc')->get();
+        foreach ($cursos as $key => $value) {
+            if($value->updated_at != null){
+                $value->actualizado = Carbon::parse($value->updated_at)->format('d/m/Y'); 
+            }
+        }
+        return new CursoResource($cursos);
     }
 
 }
